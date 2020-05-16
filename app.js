@@ -1,4 +1,12 @@
-const helpers = require('./helpers')
+/** 
+ * Object destructuring 
+ * Extracting some function from helper class
+ * */
 
-const total = helpers.sum(5, 6);
+// const helpers = require('./helpers')
+
+const { sum } = require('./helpers')
+
+
+const total = sum(5, 6);
 console.log(total);
