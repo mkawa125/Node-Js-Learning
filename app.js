@@ -6,14 +6,21 @@
 const { sum } = require('./helpers')
 
 // Core module comes with node.js
-const http = require('http')
+// const http = require('http')
 
-const server = http.createServer((req , res) =>
+// const server = http.createServer((req , res) =>
+// {
+//     res.end('Hello from mkawa')
+// });
+// server.listen(3000)
+
+const express = require('express')
+
+const app = express();
+
+app.get('/', function (req , res)
 {
-    res.end('Hello from mkawa updated')
+    res.send('This is the custom sever from express')
 });
 
-server.listen(3000);
-
-const total = sum(5, 6);
-console.log(total);
+app.listen(3000);
